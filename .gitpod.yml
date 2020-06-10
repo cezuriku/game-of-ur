@@ -2,4 +2,5 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: cmake .
+  - init: mkdir build && cd build && cmake ..
+    command: make && make test
