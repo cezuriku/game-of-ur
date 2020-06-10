@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    container:
+      image: docker://srzzumix/googletest:latest
+
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Build
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        make
+    
+    - name: Test
+      run: ./bin/test_cmake_starter
