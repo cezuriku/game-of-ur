@@ -1,0 +1,1 @@
+FROM srzzumix/googletest:latest
