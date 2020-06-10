@@ -26,6 +26,9 @@ add_executable(${TEST_NAME} ${TEST_FILES})
 find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
 
-target_link_libraries(${TEST_NAME} ${GTEST_BOTH_LIBRARIES})
+find_package(Threads)
+target_link_libraries(${TEST_NAME}
+                      ${GTEST_BOTH_LIBRARIES}
+                      ${CMAKE_THREAD_LIBS_INIT})
 
 add_test(AllTests "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${TEST_NAME}")
