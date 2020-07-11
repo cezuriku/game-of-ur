@@ -21,6 +21,6 @@ jobs:
         cd build
         cmake ..
         make
-    
+
     - name: Test
-      run: ./bin/test_cmake_starter
+      run: ./bin/test_game_of_ur

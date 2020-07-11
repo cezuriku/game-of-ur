@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.4)
 
-project(cmake_starter)
+project(game_of_ur)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 set(EXECUTABLE_NAME ${PROJECT_NAME})
